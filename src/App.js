@@ -1,4 +1,5 @@
 import "./App.css";
+import WeatherInfo from "./components/WeatherInfo";
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <header>
         <h1>Weather App</h1>
       </header>
+      <WeatherInfo />
     </div>
   );
 }
