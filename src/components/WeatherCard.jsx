@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import getWeatherData from "../api";
 import Loader from "./Loader";
 
@@ -6,7 +6,13 @@ const WeatherCard = (props) => {
   const { location } = props;
   const [weatherData, setWeatherData] = useState(null);
   if (!weatherData)
-    getWeatherData(location).then((data) => setWeatherData(data));
+    getWeatherData(location).then((data) => {
+      return setWeatherData(data);
+    });
+
+  useEffect(() => {
+    if (location) setWeatherData(null);
+  }, [location]);
 
   if (!weatherData) return <Loader />;
 
