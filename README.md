@@ -18,7 +18,7 @@ To install Node, go to: https://nodejs.org/en/download/ \
 You will also need a key for the Open Weather API.
 
 To obtain an API key, sign up for a free account here:
-https://home.openweathermap.org/users/sign_up \
+https://home.openweathermap.org/users/sign_up
 
 You API key will be emailed to you. Please note that it can take up to two hours
 for your API key to become activated after receiving it.
