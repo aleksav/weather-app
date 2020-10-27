@@ -1,7 +1,8 @@
 # Weather App
 
 Welcome to my weather app, which displays the current weather for a given
-location.
+location. The data is supplied by the
+[Open Weather API](https://openweathermap.org/api).
 
 You can find the hosted project here: https://weather-app-ab.netlify.app/
 
@@ -13,6 +14,14 @@ To run this on your machine, you will need Node.js installed on your machine.
 
 To install Node, go to: https://nodejs.org/en/download/ \
  The version required is a minimum of v. 13.8.0
+
+You will also need a key for the Open Weather API.
+
+To obtain an API key, sign up for a free account here:
+https://home.openweathermap.org/users/sign_up \
+
+You API key will be emailed to you. Please note that it can take up to two hours
+for your API key to become activated after receiving it.
 
 ### Installation
 
@@ -31,7 +40,17 @@ git clone https://github.com/austinbooth/weather-app.git
 npm install
 ```
 
-3. To run the project and start up the localserver, run:
+3. In the 'src' directory, create a 'token.js' file. This file will allow the
+   app to use your API key.
+
+Open the file, copy the line below into it, replacing 'YOUR-API-KEY' with your
+API key.
+
+```javascript
+exports.OPEN_WEATHER_TOKEN = "YOUR-API-KEY";
+```
+
+4. To run the project and start up the localserver, run:
 
 ```javascript
 npm start
