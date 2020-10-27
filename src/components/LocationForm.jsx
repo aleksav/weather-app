@@ -35,7 +35,22 @@ const LocationForm = (props) => {
   const handleChange = (event) => {
     const entered = event.target.value;
 
-    const locations = ["Prague", "Berlin", "Paris", "St Petersburg", "Split"];
+    const locations = [
+      "Aberdeen",
+      "Birmingham",
+      "Bristol",
+      "Cardiff",
+      "Edinburgh",
+      "Glasgow",
+      "Leeds",
+      "Leicester",
+      "Liverpool",
+      "London",
+      "Manchester",
+      "Nottingham",
+      "Sheffield",
+      "Southampton",
+    ];
     const possibleOptions = locations.filter((location) =>
       location.toLowerCase().includes(entered.toLowerCase())
     );
