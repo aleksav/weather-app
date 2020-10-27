@@ -26,6 +26,9 @@
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
@@ -57,4 +60,62 @@ body {
 
 .weather-description::first-letter {
   text-transform: uppercase;
+}
+
+.form-and-suggestions-container {
+  margin-bottom: 25px;
+}
+
+.suggestions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 6px;
+  padding: 6px 0;
+  position: absolute;
+  z-index: 1;
+  border: solid 1px grey;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.active-suggestion {
+  background: rgba(238, 238, 238, 255);
+}
+
+li {
+  text-align: left;
+  cursor: pointer;
+  /* width: 79%; */
+  width: 205px;
+  padding: 3px 0;
+  background: #fff;
+}
+
+input {
+  /* font-size: 1rem;
+  border: #888 solid 1px;
+  border-radius: 5px; */
+
+  border: none;
+  border-bottom: solid 1px;
+  background: none;
+  outline: none;
+  color: inherit;
+  font-size: 1rem;
+}
+
+li,
+input {
+  padding-left: 5px;
+}
+
+button {
+  font-size: 1rem;
+  margin-left: 10px;
+  /* border: #fff 1px solid; */
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  /* width: 105%; */
 }

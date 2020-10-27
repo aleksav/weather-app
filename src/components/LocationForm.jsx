@@ -99,6 +99,7 @@ const LocationForm = (props) => {
           onChange={handleChange}
           onKeyDown={handleKeyPress}
           value={inputLocation}
+          placeholder={"Search for a location"}
         ></input>
         <button type="submit">Find</button>
         {suggestions && (
