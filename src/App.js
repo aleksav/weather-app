@@ -1,5 +1,5 @@
 import "./App.css";
-import WeatherInfo from "./components/WeatherInfo";
+import WeatherCard from "./components/WeatherCard";
 
 function App() {
   return (
@@ -7,7 +7,9 @@ function App() {
       <header>
         <h1>Weather App</h1>
       </header>
-      <WeatherInfo location={"Manchester,UK"} />
+      <section className="weather">
+        <WeatherCard location={"Manchester,UK"} />
+      </section>
     </div>
   );
 }
