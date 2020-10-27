@@ -10,8 +10,7 @@ const getWeatherData = (location, units = "metric") => {
     .get(
       `weather?q=${location}&appid=${token.OPEN_WEATHER_TOKEN}&units=${units}`
     )
-    .then(({ data }) => data)
-    .catch((err) => console.log(err));
+    .then(({ data }) => data);
 };
 
 export default getWeatherData;
