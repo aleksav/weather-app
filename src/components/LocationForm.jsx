@@ -3,7 +3,6 @@ import locations from "../locationData";
 
 const LocationForm = (props) => {
   const {
-    weatherCardLocation,
     setWeatherCardLocation,
     error,
     setError,

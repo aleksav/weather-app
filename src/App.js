@@ -42,7 +42,6 @@ function App() {
       </header>
       <section className="weather">
         <LocationForm
-          weatherCardLocation={weatherCardLocation}
           setWeatherCardLocation={setWeatherCardLocation}
           error={error}
           setError={setError}
