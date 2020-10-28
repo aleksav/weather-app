@@ -106,6 +106,7 @@ const LocationForm = (props) => {
           onKeyDown={handleKeyPress}
           value={inputLocation}
           placeholder={"Search for a location"}
+          autoFocus
         ></input>
         <button type="submit">Find</button>
         {suggestions && (
