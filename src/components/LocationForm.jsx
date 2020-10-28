@@ -1,8 +1,13 @@
 import React, { useRef, useState, useEffect } from "react";
 
 const LocationForm = (props) => {
-  const { weatherCardLocation, setWeatherCardLocation } = props;
-  const { error, setError } = props;
+  const {
+    weatherCardLocation,
+    setWeatherCardLocation,
+    error,
+    setError,
+  } = props;
+  // const { error, setError } = props;
   const locationInputRef = useRef();
   const [inputLocation, setInputLocation] = useState("");
   const [suggestions, setSuggestions] = useState(null);

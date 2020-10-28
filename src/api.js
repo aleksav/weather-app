@@ -5,7 +5,7 @@ const instance = axios.create({
   baseURL: "https://api.openweathermap.org/data/2.5/",
 });
 
-const getWeatherData = (location, units = "metric") => {
+const getWeatherData = (location, units = "imperial") => {
   return instance
     .get(
       `weather?q=${location}&appid=${token.OPEN_WEATHER_TOKEN}&units=${units}`

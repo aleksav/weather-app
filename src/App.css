@@ -30,6 +30,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  font-family: Verdana, sans-serif;
 }
 
 body {
@@ -86,17 +87,12 @@ body {
 li {
   text-align: left;
   cursor: pointer;
-  /* width: 79%; */
   width: 185px;
   padding: 3px 0;
   background: #fff;
 }
 
 input {
-  /* font-size: 1rem;
-  border: #888 solid 1px;
-  border-radius: 5px; */
-
   border: none;
   border-bottom: solid 1px;
   background: none;
@@ -114,9 +110,76 @@ input {
 button {
   font-size: 1rem;
   margin-left: 10px;
-  /* border: #fff 1px solid; */
   border: none;
   border-radius: 5px;
   padding: 7px;
-  /* width: 105%; */
+}
+
+/* Temperature toggle switch */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 34px;
+  margin-bottom: 25px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e36414;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #fb8b24;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(55px);
+}
+
+.slider:after {
+  content: "°C";
+  color: white;
+  display: block;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+}
+
+input:checked + .slider:after {
+  content: "°F";
 }
