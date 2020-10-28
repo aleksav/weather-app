@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import locations from "../locationData";
 
 const LocationForm = (props) => {
   const {
@@ -7,7 +8,6 @@ const LocationForm = (props) => {
     error,
     setError,
   } = props;
-  // const { error, setError } = props;
   const locationInputRef = useRef();
   const [inputLocation, setInputLocation] = useState("");
   const [suggestions, setSuggestions] = useState(null);
@@ -42,22 +42,6 @@ const LocationForm = (props) => {
   const handleChange = (event) => {
     const entered = event.target.value;
 
-    const locations = [
-      "Aberdeen",
-      "Birmingham",
-      "Bristol",
-      "Cardiff",
-      "Edinburgh",
-      "Glasgow",
-      "Leeds",
-      "Leicester",
-      "Liverpool",
-      "London",
-      "Manchester",
-      "Nottingham",
-      "Sheffield",
-      "Southampton",
-    ];
     const possibleOptions = locations.filter((location) =>
       location.toLowerCase().includes(entered.toLowerCase())
     );
