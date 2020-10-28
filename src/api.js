@@ -6,9 +6,16 @@ const instance = axios.create({
 });
 
 const getWeatherData = (location, units = "imperial") => {
+  if (typeof location === "string")
+    return instance
+      .get(
+        `weather?q=${location}&appid=${token.OPEN_WEATHER_TOKEN}&units=${units}`
+      )
+      .then(({ data }) => data);
+
   return instance
     .get(
-      `weather?q=${location}&appid=${token.OPEN_WEATHER_TOKEN}&units=${units}`
+      `weather?lat=${location.lat}&lon=${location.lon}&appid=${token.OPEN_WEATHER_TOKEN}&units=${units}`
     )
     .then(({ data }) => data);
 };
